@@ -1,0 +1,40 @@
+625c625
+< //cout << "Declared vector pointers" << endl;
+---
+> cout << "Declared vector pointers" << endl;
+643c643
+< //cout << "Filled vector pointers" << endl;
+---
+> cout << "Filled vector pointers" << endl;
+1823c1823
+< //cout << "Begin k loop" << endl;
+---
+> cout << "Begin k loop" << endl;
+1843c1843
+< //cout << "Revector successful" << endl;
+---
+> cout << "Revector successful" << endl;
+1920c1920
+< 				if(lctStation[i] == 1 && lctRing[i] == 1 && lctEndcap[i] == 2) me11negCounter++;			
+---
+> 				if(lctStation[i] == 1 && lctRing[i] == 1 && lctEndcap[i] == -1) me11negCounter++;			
+2027c2027
+< 				if(lctEndcap[statOneIndex[i]] == 2) statOneIndexNeg.push_back(statOneIndex[i]); 
+---
+> 				if(lctEndcap[statOneIndex[i]] == -1) statOneIndexNeg.push_back(statOneIndex[i]); 
+2031c2031
+< 				if(lctEndcap[statTwoIndex[i]] == 2) statTwoIndexNeg.push_back(statTwoIndex[i]);
+---
+> 				if(lctEndcap[statTwoIndex[i]] == -1) statTwoIndexNeg.push_back(statTwoIndex[i]);
+2035c2035
+< 				if(lctEndcap[statThreeIndex[i]] == 2) statThreeIndexNeg.push_back(statThreeIndex[i]);
+---
+> 				if(lctEndcap[statThreeIndex[i]] == -1) statThreeIndexNeg.push_back(statThreeIndex[i]);
+2145c2145
+< 				if(lctEndcap[i] == 2){
+---
+> 				if(lctEndcap[i] == -1){
+2184c2184
+< 				if(lctEndcap[i] == 2){
+---
+> 				if(lctEndcap[i] == -1){
