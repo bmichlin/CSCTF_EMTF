@@ -1,0 +1,739 @@
+DEBUG 2015-07-09 12:01:27,611: 	 Executing command: 'checkwrite'
+DEBUG 2015-07-09 12:01:27,612: 	 Found CRAB cache file /afs/cern.ch/user/b/bmichlin/.crab3
+DEBUG 2015-07-09 12:01:27,652: 	 Checking credentials
+DEBUG 2015-07-09 12:01:27,652: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:01:27,652: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:01:28,257: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 43133
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:01:28,661: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 
+ error: No VOMS attributes found!
+
+ retcode : 1
+DEBUG 2015-07-09 12:01:28,661: 	 Proxy valid for 00:00:00 hours
+DEBUG 2015-07-09 12:01:28,661: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2015-07-09 12:01:36,090: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2015-07-09 12:01:36,496: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:01:36,903: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:01:37,308: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:01:37,308: 	 Proxy created.
+DEBUG 2015-07-09 12:01:37,416: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/7e6c66675bfb4f3f09cc71ba17370ff0/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1o/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-07-09 12:01:37,417: 	 Checking credentials
+DEBUG 2015-07-09 12:01:37,417: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:01:37,417: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:01:37,821: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:01:38,325: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86396
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:01:38,325: 	 Proxy valid for 23:59:57 hours
+DEBUG 2015-07-09 12:01:38,830: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:01:38,830: 	 Command use: checkwrite
+DEBUG 2015-07-09 12:01:38,830: 	 Options use: ['--site=T3_US_FNALLPC']
+DEBUG 2015-07-09 12:01:38,830: 	 Instance is None
+DEBUG 2015-07-09 12:01:38,830: 	 Server base url is None
+DEBUG 2015-07-09 12:01:38,860: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'maxcachereuse': 24.0, 'cachepath': '/tmp/bmichlin/.wmcore_cache_Dm6yQk/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'req_cache_path': '/tmp/bmichlin/.wmcore_cache_Dm6yQk/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/bmichlin/.wmcore_cache_Dm6yQk/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x12dd7a0>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger instance at 0x12bac68>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x12de1d0>}, 'logger': <logging.Logger instance at 0x12bac68>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/bmichlin/.wmcore_cache_Dm6yQk/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-07-09 12:01:38,860: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-07-09 12:01:38,860: 	 Retrieving DN from proxy...
+INFO 2015-07-09 12:01:39,973: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+INFO 2015-07-09 12:01:39,973: 	 Retrieving username from SiteDB...
+INFO 2015-07-09 12:01:42,256: 	 Username is: bmichlin
+INFO 2015-07-09 12:01:42,256: 	 Validating LFN /store/user/bmichlin...
+INFO 2015-07-09 12:01:42,257: 	 LFN /store/user/bmichlin is valid.
+INFO 2015-07-09 12:01:42,281: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-07-09 12:01:42,283: 	 Will check write permission in /store/user/bmichlin on site T3_US_FNALLPC
+DEBUG 2015-07-09 12:01:42,288: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T3_US_FNALLPC'], 'custodial': 'n', 'lfn': ['/store/user/bmichlin/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+INFO 2015-07-09 12:01:44,466: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/bmichlin on site T3_US_FNALLPC
+INFO 2015-07-09 12:01:44,473: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-copy -v -t 180 file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:01:44,474: 	 Please wait...
+INFO 2015-07-09 12:01:45,878: 	 Failed running copy command
+INFO 2015-07-09 12:01:45,879: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp => srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp
+    
+INFO 2015-07-09 12:01:45,879: 	   Stderr:
+    gfal-copy error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp 
+    
+INFO 2015-07-09 12:01:45,879: 	 Error copying file crab3checkwrite.0.tmp to /store/user/bmichlin on site T3_US_FNALLPC; it may be that file already exists.
+INFO 2015-07-09 12:01:45,879: 	 Attempting to delete file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp from site T3_US_FNALLPC
+INFO 2015-07-09 12:01:45,879: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-rm -v -t 180 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:01:45,879: 	 Please wait...
+INFO 2015-07-09 12:01:46,620: 	 Successfully deleted file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp from site T3_US_FNALLPC
+INFO 2015-07-09 12:01:46,620: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/bmichlin on site T3_US_FNALLPC
+INFO 2015-07-09 12:01:46,628: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-copy -v -t 180 file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:01:46,628: 	 Please wait...
+INFO 2015-07-09 12:01:47,779: 	 Failed running copy command
+INFO 2015-07-09 12:01:47,780: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp => srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp
+    
+INFO 2015-07-09 12:01:47,780: 	   Stderr:
+    gfal-copy error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp 
+    
+INFO 2015-07-09 12:01:47,780: 	 Unable to check write permission in /store/user/bmichlin on site T3_US_FNALLPC
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2015-07-09 12:01:47,781: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2015-07-09 12:02:17,146: 	 Executing command: 'checkwrite'
+DEBUG 2015-07-09 12:02:17,146: 	 Found CRAB cache file /afs/cern.ch/user/b/bmichlin/.crab3
+DEBUG 2015-07-09 12:02:17,157: 	 Checking credentials
+DEBUG 2015-07-09 12:02:17,157: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:02:17,157: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:02:17,661: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86357
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:02:18,066: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86356
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:02:18,067: 	 Proxy valid for 23:59:17 hours
+DEBUG 2015-07-09 12:02:18,176: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/7e6c66675bfb4f3f09cc71ba17370ff0/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1o/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-07-09 12:02:18,177: 	 Checking credentials
+DEBUG 2015-07-09 12:02:18,177: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:02:18,177: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:02:18,682: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86356
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:02:19,188: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86355
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:02:19,189: 	 Proxy valid for 23:59:16 hours
+DEBUG 2015-07-09 12:02:19,693: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:02:19,694: 	 Command use: checkwrite
+DEBUG 2015-07-09 12:02:19,694: 	 Options use: ['--site=T3_US_FNAL']
+DEBUG 2015-07-09 12:02:19,694: 	 Instance is None
+DEBUG 2015-07-09 12:02:19,694: 	 Server base url is None
+DEBUG 2015-07-09 12:02:19,707: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'maxcachereuse': 24.0, 'cachepath': '/tmp/bmichlin/.wmcore_cache_mt4nZV/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'req_cache_path': '/tmp/bmichlin/.wmcore_cache_mt4nZV/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/bmichlin/.wmcore_cache_mt4nZV/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x25fe560>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger instance at 0x25dbc68>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x25ff150>}, 'logger': <logging.Logger instance at 0x25dbc68>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/bmichlin/.wmcore_cache_mt4nZV/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-07-09 12:02:19,707: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-07-09 12:02:19,707: 	 Retrieving DN from proxy...
+INFO 2015-07-09 12:02:20,840: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+INFO 2015-07-09 12:02:20,841: 	 Retrieving username from SiteDB...
+INFO 2015-07-09 12:02:22,807: 	 Username is: bmichlin
+INFO 2015-07-09 12:02:22,807: 	 Validating LFN /store/user/bmichlin...
+INFO 2015-07-09 12:02:22,807: 	 LFN /store/user/bmichlin is valid.
+INFO 2015-07-09 12:02:22,819: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-07-09 12:02:22,820: 	 Will check write permission in /store/user/bmichlin on site T3_US_FNAL
+DEBUG 2015-07-09 12:02:22,823: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T3_US_FNAL'], 'custodial': 'n', 'lfn': ['/store/user/bmichlin/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-07-09 12:02:23,084: 	 The cachefile /tmp/bmichlin/.wmcore_cache_mt4nZV/cmsweb.cern.ch/-923056978915537701_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T3_US_FNAL '.\n
+
+INFO 2015-07-09 12:02:23,084: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-07-09 12:02:23,084: 	 Result: no nodes found for ' T3_US_FNAL '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T3_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fbmichlin%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-07-09 12:02:23,084: 	 Error contacting the server.
+DEBUG 2015-07-09 12:02:23,084: 	 ERROR: Bad Request (400):  'no nodes found for ' T3_US_FNAL '.\n'
+DEBUG 2015-07-09 12:02:23,084: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T3_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fbmichlin%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-07-09 12:02:23,084: 	      Input data: 
+DEBUG 2015-07-09 12:02:23,085: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Thu, 09 Jul 2015 10:17:23 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Thu, 09 Jul 2015 10:02:23 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=62761 t=1436436143019951'}
+ERROR 2015-07-09 12:02:23,085: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1506-comp2/bin/crab", line 136, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1506-comp2/bin/crab", line 124, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1506-comp2/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 83, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1506-comp2/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 168, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-07-09 12:03:15,487: 	 Executing command: 'checkwrite'
+DEBUG 2015-07-09 12:03:15,488: 	 Found CRAB cache file /afs/cern.ch/user/b/bmichlin/.crab3
+DEBUG 2015-07-09 12:03:15,500: 	 Checking credentials
+DEBUG 2015-07-09 12:03:15,500: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:03:15,500: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:03:16,004: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86299
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:16,511: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86298
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:16,512: 	 Proxy valid for 23:58:19 hours
+DEBUG 2015-07-09 12:03:16,620: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/7e6c66675bfb4f3f09cc71ba17370ff0/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1o/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-07-09 12:03:16,620: 	 Checking credentials
+DEBUG 2015-07-09 12:03:16,620: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:03:16,620: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:03:17,127: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86297
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:17,632: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86297
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:17,633: 	 Proxy valid for 23:58:17 hours
+DEBUG 2015-07-09 12:03:18,139: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:18,139: 	 Command use: checkwrite
+DEBUG 2015-07-09 12:03:18,139: 	 Options use: ['--site=T3_US_FNALLPC']
+DEBUG 2015-07-09 12:03:18,140: 	 Instance is None
+DEBUG 2015-07-09 12:03:18,140: 	 Server base url is None
+DEBUG 2015-07-09 12:03:18,160: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'maxcachereuse': 24.0, 'cachepath': '/tmp/bmichlin/.wmcore_cache_7sX7lV/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'req_cache_path': '/tmp/bmichlin/.wmcore_cache_7sX7lV/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/bmichlin/.wmcore_cache_7sX7lV/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0xbb8560>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger instance at 0xb95c68>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0xbb9150>}, 'logger': <logging.Logger instance at 0xb95c68>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/bmichlin/.wmcore_cache_7sX7lV/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-07-09 12:03:18,160: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-07-09 12:03:18,160: 	 Retrieving DN from proxy...
+INFO 2015-07-09 12:03:19,336: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+INFO 2015-07-09 12:03:19,336: 	 Retrieving username from SiteDB...
+INFO 2015-07-09 12:03:22,965: 	 Username is: bmichlin
+INFO 2015-07-09 12:03:22,965: 	 Validating LFN /store/user/bmichlin...
+INFO 2015-07-09 12:03:22,966: 	 LFN /store/user/bmichlin is valid.
+INFO 2015-07-09 12:03:22,996: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-07-09 12:03:22,996: 	 Will check write permission in /store/user/bmichlin on site T3_US_FNALLPC
+DEBUG 2015-07-09 12:03:22,999: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T3_US_FNALLPC'], 'custodial': 'n', 'lfn': ['/store/user/bmichlin/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+INFO 2015-07-09 12:03:23,597: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/bmichlin on site T3_US_FNALLPC
+INFO 2015-07-09 12:03:23,609: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-copy -v -t 180 file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:03:23,611: 	 Please wait...
+INFO 2015-07-09 12:03:24,757: 	 Failed running copy command
+INFO 2015-07-09 12:03:24,757: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp => srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp
+    
+INFO 2015-07-09 12:03:24,758: 	   Stderr:
+    gfal-copy error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp 
+    
+INFO 2015-07-09 12:03:24,758: 	 Error copying file crab3checkwrite.0.tmp to /store/user/bmichlin on site T3_US_FNALLPC; it may be that file already exists.
+INFO 2015-07-09 12:03:24,758: 	 Attempting to delete file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp from site T3_US_FNALLPC
+INFO 2015-07-09 12:03:24,758: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-rm -v -t 180 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:03:24,758: 	 Please wait...
+INFO 2015-07-09 12:03:25,497: 	 Successfully deleted file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp from site T3_US_FNALLPC
+INFO 2015-07-09 12:03:25,498: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/bmichlin on site T3_US_FNALLPC
+INFO 2015-07-09 12:03:25,506: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-copy -v -t 180 file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:03:25,506: 	 Please wait...
+INFO 2015-07-09 12:03:26,646: 	 Failed running copy command
+INFO 2015-07-09 12:03:26,647: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp => srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp
+    
+INFO 2015-07-09 12:03:26,647: 	   Stderr:
+    gfal-copy error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp 
+    
+INFO 2015-07-09 12:03:26,647: 	 Unable to check write permission in /store/user/bmichlin on site T3_US_FNALLPC
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2015-07-09 12:03:26,735: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2015-07-09 12:03:57,385: 	 Executing command: 'checkwrite'
+DEBUG 2015-07-09 12:03:57,385: 	 Found CRAB cache file /afs/cern.ch/user/b/bmichlin/.crab3
+DEBUG 2015-07-09 12:03:57,394: 	 Checking credentials
+DEBUG 2015-07-09 12:03:57,394: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:03:57,394: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:03:57,898: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86257
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:58,302: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86256
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:58,302: 	 Proxy valid for 23:57:37 hours
+DEBUG 2015-07-09 12:03:58,412: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/7e6c66675bfb4f3f09cc71ba17370ff0/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1o/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-07-09 12:03:58,412: 	 Checking credentials
+DEBUG 2015-07-09 12:03:58,412: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:03:58,412: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:03:58,818: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86256
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:59,324: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86255
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:59,324: 	 Proxy valid for 23:57:36 hours
+DEBUG 2015-07-09 12:03:59,829: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:03:59,829: 	 Command use: checkwrite
+DEBUG 2015-07-09 12:03:59,829: 	 Options use: ['--site=T3_US_FNALLPC', '--lfn=/store/user/bam8/']
+DEBUG 2015-07-09 12:03:59,829: 	 Instance is None
+DEBUG 2015-07-09 12:03:59,829: 	 Server base url is None
+DEBUG 2015-07-09 12:03:59,832: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'maxcachereuse': 24.0, 'cachepath': '/tmp/bmichlin/.wmcore_cache_aU1DS3/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'req_cache_path': '/tmp/bmichlin/.wmcore_cache_aU1DS3/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/bmichlin/.wmcore_cache_aU1DS3/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x274c560>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger instance at 0x2729c68>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x274d1d0>}, 'logger': <logging.Logger instance at 0x2729c68>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/bmichlin/.wmcore_cache_aU1DS3/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-07-09 12:03:59,832: 	 Validating LFN /store/user/bam8/...
+INFO 2015-07-09 12:03:59,832: 	 Retrieving DN from proxy...
+INFO 2015-07-09 12:04:01,037: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+INFO 2015-07-09 12:04:01,037: 	 Retrieving username from SiteDB...
+INFO 2015-07-09 12:04:03,243: 	 Username is: bmichlin
+INFO 2015-07-09 12:04:03,244: 	 Refusing to check write permission in /store/user/bam8/, because this is not an allowed LFN for stageout.
+The LFN must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off), where username is your username as registered in SiteDB (i.e. the username of your CERN primary account).
+LFN /store/user/bam8/ is not valid.
+DEBUG 2015-07-09 12:04:45,579: 	 Executing command: 'checkwrite'
+DEBUG 2015-07-09 12:04:45,580: 	 Found CRAB cache file /afs/cern.ch/user/b/bmichlin/.crab3
+DEBUG 2015-07-09 12:04:45,592: 	 Checking credentials
+DEBUG 2015-07-09 12:04:45,592: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:04:45,592: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:04:46,100: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86208
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:04:46,607: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86208
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:04:46,608: 	 Proxy valid for 23:56:48 hours
+DEBUG 2015-07-09 12:04:46,717: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/7e6c66675bfb4f3f09cc71ba17370ff0/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1o/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-07-09 12:04:46,718: 	 Checking credentials
+DEBUG 2015-07-09 12:04:46,718: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:04:46,718: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:04:47,122: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86207
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:04:47,525: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86207
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:04:47,526: 	 Proxy valid for 23:56:47 hours
+DEBUG 2015-07-09 12:04:48,033: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:04:48,034: 	 Command use: checkwrite
+DEBUG 2015-07-09 12:04:48,034: 	 Options use: ['--site=T3_US_FNALLPC', '--lfn=/store/user/bam8']
+DEBUG 2015-07-09 12:04:48,034: 	 Instance is None
+DEBUG 2015-07-09 12:04:48,034: 	 Server base url is None
+DEBUG 2015-07-09 12:04:48,057: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'maxcachereuse': 24.0, 'cachepath': '/tmp/bmichlin/.wmcore_cache_O1RQZW/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'req_cache_path': '/tmp/bmichlin/.wmcore_cache_O1RQZW/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/bmichlin/.wmcore_cache_O1RQZW/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x1211560>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger instance at 0x11ecc68>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x1212190>}, 'logger': <logging.Logger instance at 0x11ecc68>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/bmichlin/.wmcore_cache_O1RQZW/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-07-09 12:04:48,057: 	 Validating LFN /store/user/bam8...
+INFO 2015-07-09 12:04:48,058: 	 Retrieving DN from proxy...
+INFO 2015-07-09 12:04:49,161: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+INFO 2015-07-09 12:04:49,161: 	 Retrieving username from SiteDB...
+INFO 2015-07-09 12:04:51,054: 	 Username is: bmichlin
+INFO 2015-07-09 12:04:51,054: 	 Refusing to check write permission in /store/user/bam8, because this is not an allowed LFN for stageout.
+The LFN must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off), where username is your username as registered in SiteDB (i.e. the username of your CERN primary account).
+LFN /store/user/bam8 is not valid.
+DEBUG 2015-07-09 12:05:18,742: 	 Executing command: 'checkwrite'
+DEBUG 2015-07-09 12:05:18,742: 	 Found CRAB cache file /afs/cern.ch/user/b/bmichlin/.crab3
+DEBUG 2015-07-09 12:05:18,749: 	 Checking credentials
+DEBUG 2015-07-09 12:05:18,750: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:05:18,750: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:05:19,253: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86175
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:05:19,658: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86175
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:05:19,659: 	 Proxy valid for 23:56:15 hours
+DEBUG 2015-07-09 12:05:19,767: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/7e6c66675bfb4f3f09cc71ba17370ff0/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1o/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-07-09 12:05:19,767: 	 Checking credentials
+DEBUG 2015-07-09 12:05:19,767: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:05:19,767: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:05:20,172: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86174
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:05:20,577: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86174
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:05:20,577: 	 Proxy valid for 23:56:14 hours
+DEBUG 2015-07-09 12:05:20,981: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:05:20,981: 	 Command use: checkwrite
+DEBUG 2015-07-09 12:05:20,981: 	 Options use: ['--site=T3_US_FNALLPC', '--lfn=/eos/uscms/store/user/bam8']
+DEBUG 2015-07-09 12:05:20,981: 	 Instance is None
+DEBUG 2015-07-09 12:05:20,981: 	 Server base url is None
+DEBUG 2015-07-09 12:05:20,986: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'maxcachereuse': 24.0, 'cachepath': '/tmp/bmichlin/.wmcore_cache_o7HEwJ/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'req_cache_path': '/tmp/bmichlin/.wmcore_cache_o7HEwJ/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/bmichlin/.wmcore_cache_o7HEwJ/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x22645f0>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger instance at 0x2241cb0>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x2266150>}, 'logger': <logging.Logger instance at 0x2241cb0>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/bmichlin/.wmcore_cache_o7HEwJ/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-07-09 12:05:20,986: 	 Validating LFN /eos/uscms/store/user/bam8...
+INFO 2015-07-09 12:05:20,986: 	 Refusing to check write permission in /eos/uscms/store/user/bam8, because this is not an allowed LFN for stageout.
+The LFN must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off), where username is your username as registered in SiteDB (i.e. the username of your CERN primary account).
+LFN /eos/uscms/store/user/bam8 is not valid.
+DEBUG 2015-07-09 12:06:22,130: 	 Executing command: 'checkwrite'
+DEBUG 2015-07-09 12:06:22,130: 	 Found CRAB cache file /afs/cern.ch/user/b/bmichlin/.crab3
+DEBUG 2015-07-09 12:06:22,146: 	 Checking credentials
+DEBUG 2015-07-09 12:06:22,147: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:06:22,147: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:06:22,653: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86112
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:23,158: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86111
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:23,158: 	 Proxy valid for 23:55:12 hours
+DEBUG 2015-07-09 12:06:23,267: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/7e6c66675bfb4f3f09cc71ba17370ff0/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1o/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-07-09 12:06:23,268: 	 Checking credentials
+DEBUG 2015-07-09 12:06:23,268: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:06:23,268: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:06:23,773: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86111
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:24,279: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86110
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:24,279: 	 Proxy valid for 23:55:11 hours
+DEBUG 2015-07-09 12:06:24,785: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:24,785: 	 Command use: checkwrite
+DEBUG 2015-07-09 12:06:24,785: 	 Options use: ['--site=T3_US_FNALLPC', '--lfn=/eos/uscms/store/user/bmichlin']
+DEBUG 2015-07-09 12:06:24,785: 	 Instance is None
+DEBUG 2015-07-09 12:06:24,785: 	 Server base url is None
+DEBUG 2015-07-09 12:06:24,802: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'maxcachereuse': 24.0, 'cachepath': '/tmp/bmichlin/.wmcore_cache_6u4O9N/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'req_cache_path': '/tmp/bmichlin/.wmcore_cache_6u4O9N/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/bmichlin/.wmcore_cache_6u4O9N/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x1d2f5a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger instance at 0x1d0ac68>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x1d31150>}, 'logger': <logging.Logger instance at 0x1d0ac68>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/bmichlin/.wmcore_cache_6u4O9N/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-07-09 12:06:24,802: 	 Validating LFN /eos/uscms/store/user/bmichlin...
+INFO 2015-07-09 12:06:24,802: 	 Refusing to check write permission in /eos/uscms/store/user/bmichlin, because this is not an allowed LFN for stageout.
+The LFN must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off), where username is your username as registered in SiteDB (i.e. the username of your CERN primary account).
+LFN /eos/uscms/store/user/bmichlin is not valid.
+DEBUG 2015-07-09 12:06:34,008: 	 Executing command: 'checkwrite'
+DEBUG 2015-07-09 12:06:34,008: 	 Found CRAB cache file /afs/cern.ch/user/b/bmichlin/.crab3
+DEBUG 2015-07-09 12:06:34,014: 	 Checking credentials
+DEBUG 2015-07-09 12:06:34,014: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:06:34,014: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:06:34,420: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86100
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:35,025: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86100
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:35,025: 	 Proxy valid for 23:55:00 hours
+DEBUG 2015-07-09 12:06:35,135: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/7e6c66675bfb4f3f09cc71ba17370ff0/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1o/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-07-09 12:06:35,135: 	 Checking credentials
+DEBUG 2015-07-09 12:06:35,135: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:06:35,135: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:06:35,642: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86099
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:36,147: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86098
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:36,148: 	 Proxy valid for 23:54:59 hours
+DEBUG 2015-07-09 12:06:36,652: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:06:36,653: 	 Command use: checkwrite
+DEBUG 2015-07-09 12:06:36,653: 	 Options use: ['--site=T3_US_FNALLPC', '--lfn=/store/user/bmichlin']
+DEBUG 2015-07-09 12:06:36,653: 	 Instance is None
+DEBUG 2015-07-09 12:06:36,653: 	 Server base url is None
+DEBUG 2015-07-09 12:06:36,656: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'maxcachereuse': 24.0, 'cachepath': '/tmp/bmichlin/.wmcore_cache_xtTRdr/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'req_cache_path': '/tmp/bmichlin/.wmcore_cache_xtTRdr/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/bmichlin/.wmcore_cache_xtTRdr/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0xc9d5a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger instance at 0xc78cb0>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0xc9e190>}, 'logger': <logging.Logger instance at 0xc78cb0>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/bmichlin/.wmcore_cache_xtTRdr/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-07-09 12:06:36,657: 	 Validating LFN /store/user/bmichlin...
+INFO 2015-07-09 12:06:36,657: 	 Retrieving DN from proxy...
+INFO 2015-07-09 12:06:37,786: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+INFO 2015-07-09 12:06:37,786: 	 Retrieving username from SiteDB...
+INFO 2015-07-09 12:06:39,851: 	 Username is: bmichlin
+INFO 2015-07-09 12:06:39,852: 	 LFN /store/user/bmichlin is valid.
+INFO 2015-07-09 12:06:39,870: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-07-09 12:06:39,871: 	 Will check write permission in /store/user/bmichlin on site T3_US_FNALLPC
+DEBUG 2015-07-09 12:06:39,877: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T3_US_FNALLPC'], 'custodial': 'n', 'lfn': ['/store/user/bmichlin/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+INFO 2015-07-09 12:06:41,975: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/bmichlin on site T3_US_FNALLPC
+INFO 2015-07-09 12:06:41,986: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-copy -v -t 180 file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:06:41,988: 	 Please wait...
+INFO 2015-07-09 12:06:43,142: 	 Failed running copy command
+INFO 2015-07-09 12:06:43,142: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp => srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp
+    
+INFO 2015-07-09 12:06:43,142: 	   Stderr:
+    gfal-copy error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp 
+    
+INFO 2015-07-09 12:06:43,142: 	 Error copying file crab3checkwrite.0.tmp to /store/user/bmichlin on site T3_US_FNALLPC; it may be that file already exists.
+INFO 2015-07-09 12:06:43,142: 	 Attempting to delete file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp from site T3_US_FNALLPC
+INFO 2015-07-09 12:06:43,143: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-rm -v -t 180 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:06:43,143: 	 Please wait...
+INFO 2015-07-09 12:06:45,396: 	 Successfully deleted file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp from site T3_US_FNALLPC
+INFO 2015-07-09 12:06:45,396: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/bmichlin on site T3_US_FNALLPC
+INFO 2015-07-09 12:06:45,402: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-copy -v -t 180 file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:06:45,402: 	 Please wait...
+INFO 2015-07-09 12:06:46,570: 	 Failed running copy command
+INFO 2015-07-09 12:06:46,570: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp => srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp
+    
+INFO 2015-07-09 12:06:46,570: 	   Stderr:
+    gfal-copy error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/bmichlin/crab3checkwrite.0.tmp 
+    
+INFO 2015-07-09 12:06:46,570: 	 Unable to check write permission in /store/user/bmichlin on site T3_US_FNALLPC
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2015-07-09 12:06:46,651: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2015-07-09 12:07:17,617: 	 Executing command: 'checkwrite'
+DEBUG 2015-07-09 12:07:17,617: 	 Found CRAB cache file /afs/cern.ch/user/b/bmichlin/.crab3
+DEBUG 2015-07-09 12:07:17,631: 	 Checking credentials
+DEBUG 2015-07-09 12:07:17,631: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:07:17,632: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:07:18,136: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86056
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:07:18,641: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86056
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:07:18,642: 	 Proxy valid for 23:54:16 hours
+DEBUG 2015-07-09 12:07:18,750: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/7e6c66675bfb4f3f09cc71ba17370ff0/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1o/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-07-09 12:07:18,751: 	 Checking credentials
+DEBUG 2015-07-09 12:07:18,751: 	 Found proxy file /afs/cern.ch/user/b/bmichlin/.x509up_u39376
+DEBUG 2015-07-09 12:07:18,751: 	 Getting proxy life time left
+DEBUG 2015-07-09 12:07:19,255: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -timeleft
+ output : 86055
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:07:19,760: 	 Executing : 
+ command : voms-proxy-info -file /afs/cern.ch/user/b/bmichlin/.x509up_u39376 -actimeleft
+ output : 86055
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:07:19,761: 	 Proxy valid for 23:54:15 hours
+DEBUG 2015-07-09 12:07:20,266: 	 Executing : 
+ command : env X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-07-09 12:07:20,266: 	 Command use: checkwrite
+DEBUG 2015-07-09 12:07:20,266: 	 Options use: ['--site=T2_US_Caltech']
+DEBUG 2015-07-09 12:07:20,266: 	 Instance is None
+DEBUG 2015-07-09 12:07:20,266: 	 Server base url is None
+DEBUG 2015-07-09 12:07:20,270: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'maxcachereuse': 24.0, 'cachepath': '/tmp/bmichlin/.wmcore_cache_fKuvfC/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'req_cache_path': '/tmp/bmichlin/.wmcore_cache_fKuvfC/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/bmichlin/.wmcore_cache_fKuvfC/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/afs/cern.ch/user/b/bmichlin/.x509up_u39376', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x27ee560>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger instance at 0x27cbc68>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x27ef150>}, 'logger': <logging.Logger instance at 0x27cbc68>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/bmichlin/.wmcore_cache_fKuvfC/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-07-09 12:07:20,270: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-07-09 12:07:20,270: 	 Retrieving DN from proxy...
+INFO 2015-07-09 12:07:21,501: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bmichlin/CN=740656/CN=Benjamin Ari Michlin
+INFO 2015-07-09 12:07:21,502: 	 Retrieving username from SiteDB...
+INFO 2015-07-09 12:07:23,578: 	 Username is: bmichlin
+INFO 2015-07-09 12:07:23,578: 	 Validating LFN /store/user/bmichlin...
+INFO 2015-07-09 12:07:23,578: 	 LFN /store/user/bmichlin is valid.
+INFO 2015-07-09 12:07:23,598: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-07-09 12:07:23,603: 	 Will check write permission in /store/user/bmichlin on site T2_US_Caltech
+DEBUG 2015-07-09 12:07:23,606: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T2_US_Caltech'], 'custodial': 'n', 'lfn': ['/store/user/bmichlin/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+INFO 2015-07-09 12:07:23,922: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/bmichlin on site T2_US_Caltech
+INFO 2015-07-09 12:07:23,929: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-copy -v -t 180 file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp 'srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:07:23,930: 	 Please wait...
+INFO 2015-07-09 12:07:26,494: 	 Failed running copy command
+INFO 2015-07-09 12:07:26,495: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp => srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/bmichlin/crab3checkwrite.0.tmp
+    
+INFO 2015-07-09 12:07:26,495: 	   Stderr:
+    gfal-copy error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/bmichlin/crab3checkwrite.0.tmp 
+    
+INFO 2015-07-09 12:07:26,495: 	 Error copying file crab3checkwrite.0.tmp to /store/user/bmichlin on site T2_US_Caltech; it may be that file already exists.
+INFO 2015-07-09 12:07:26,495: 	 Attempting to delete file srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/bmichlin/crab3checkwrite.0.tmp from site T2_US_Caltech
+INFO 2015-07-09 12:07:26,496: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-rm -v -t 180 'srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:07:26,496: 	 Please wait...
+INFO 2015-07-09 12:07:27,625: 	 Successfully deleted file srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/bmichlin/crab3checkwrite.0.tmp from site T2_US_Caltech
+INFO 2015-07-09 12:07:27,626: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/bmichlin on site T2_US_Caltech
+INFO 2015-07-09 12:07:27,632: 	 Executing command: env -i X509_USER_PROXY=/afs/cern.ch/user/b/bmichlin/.x509up_u39376 gfal-copy -v -t 180 file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp 'srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/bmichlin/crab3checkwrite.0.tmp'
+INFO 2015-07-09 12:07:27,632: 	 Please wait...
+INFO 2015-07-09 12:07:29,789: 	 Failed running copy command
+INFO 2015-07-09 12:07:29,789: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/work/b/bmichlin/private/DataForNote/CMSSW_7_4_2/src/crab3checkwrite.0.tmp => srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/bmichlin/crab3checkwrite.0.tmp
+    
+INFO 2015-07-09 12:07:29,789: 	   Stderr:
+    gfal-copy error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/bmichlin/crab3checkwrite.0.tmp 
+    
+INFO 2015-07-09 12:07:29,789: 	 Unable to check write permission in /store/user/bmichlin on site T2_US_Caltech
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2015-07-09 12:07:29,836: 	 Note: You cannot write to a site if you did not ask permission.
