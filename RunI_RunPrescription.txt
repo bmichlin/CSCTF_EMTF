@@ -1,0 +1,65 @@
+1.	Start by picking a run to work with e.g. 247073
+a.	Go to the WBM (https://cmswbm.web.cern.ch/cmswbm/cmsdb/servlet/RunSummary) and search the run number 
+i.	Note the “Online Version”. This is the CMSSW version the analysis must be run in. For 247073 this is CMSSW_7_4_2
+b.	Go to the DQM (https://cmsweb.cern.ch/dqm/online/session/) and find the run
+i.	If you do not have a personal certificate and/or you have not registered with the CMS VO you will see an error page with instructions on how to do this. This TWiki page has more on this: https://cmsweb.cern.ch/dqm/online/session/
+ii.	To find the run, click on Workspace -> top -> L1T -> L1TCSCTF, then click on Run # and search for the run you’re looking at
+iii.	<attach pictures of Cosmic, Halo, and Beam runs>
+c.	Next you need to find the global tag for your run at https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFrontierConditions#Global_Tags_for_Data_Taking
+2.	Find your run in eos
+a.	Go to /store/data/
+i.	If you’re looking at a CRUZET, CRAFT, beam halo, or beam splash run next go to Commissioning2015, and then Cosmics or SingleMu
+ii.	If you’re looking at Beam data, go to Run2015A or Run2015B, then SingleMu
+b.	Next, cd RAW/v1/000/ , and then find the file for your run number, (e.g. for 247073 the final path is /store/data/Run2015A/SingleMu/RAW/v1/000/247/073/00000/ )
+c.	Make note of the .root files in this folder, as they will be used later
+d.	If you have trouble you can also look for your run in DAS at https://cmsweb.cern.ch/das/
+3.	Install the version of CMSSW from the WBM
+cmsrel CMSSW_X_X_X_patchX
+cd CMSSW_X_X_X_patch_X/src
+cmsenv
+git clone https://github.com/cms-l1-dpg/L1Ntuples.git L1TriggerDPG/L1Ntuples
+cd L1TriggerDPG/L1Ntuples
+cmsenv
+scram b
+4.	Generate L1Ntuples using l1Ntuple.py
+a.	“cd test”, then “vi l1Ntuple.py”
+b.	Edit line 28 to include the global tag for your run. For 247073 this line reads: process.GlobalTag.globaltag = 'GR_P_V54::All'
+c.	Edit line 32 to contain your desired output filename
+d.	Edit the contents of cms.Path (line 45) so that the shown lines are commented out
+process.p = cms.Path(
+		process.gtDigis
+    +process.gtEvmDigis
+#   +process.gctDigis
+#   +process.dttfDigis
+    +process.csctfDigis
+    +process.l1NtupleProducer
+#   +process.l1extraParticles
+#   +process.l1ExtraTreeProducer
+#   +process.l1GtTriggerMenuLite
+#   +process.l1MenuTreeProducer
+#   +process.l1RecoTreeProducer
+#   +process.l1MuonRecoTreeProducer
+)
+e.	In line 60, change 250 to -1 in order to run over all events
+f.	At the end of the file, replace any files that may be listed within readFiles with the root files from eos in part 2c.
+g.	Make sure secFiles is empty, otherwise l1Ntuple.py won’t run
+h.	Once all these changes are made, run the program with “cmsRun l1Ntuple.py”
+5.	Analyze the L1Ntuples
+a.	“cd ..”, then cp the file produced by l1Ntuple.py into the “macros” folder
+b.	cd into macros, and copy the WalkAround.C file you are using into it
+i.	<get a permanent link to this file from Ben>
+c.	Start ROOT and run WalkAround
+root –l
+.x initL1Analysis.C+
+.L WalkAround.C+
+WalkAround *macro = new WalkAround(“<insert root file here>”)
+macro->run(<FileNumber (can be anything)>,<runNumber>,-1, 0,<station #>,<ring #>,<# of chambers in the ring>,0,0,0)
+6.	Synchronizing the Output File
+a.	There are four different PlotChiCorrections.C files, each taking into account different corrections. If you are using data from a cosmic run use TOF corrections, otherwise use one of the other files. Whether or not to use propagation corrections depends on what best minimizes the chi-squared.
+b.	Copy PlotChiCorrection.C into the same folder as the output file from WalkAround.C 
+i.	NB: PlotChiCorrections currently only works in ROOT5, so if the CMSSW version you are in uses ROOT6 you will have to do the synchronization somewhere else
+c.	Start ROOT and run PlotChiCorrections
+root –l
+.L PlotChiCorrections.C
+ChiSquarePlots(“<insert root file here>”,<run #>,<station #>,<ring #>,<# of chambers in ring>,<endcap # (1 for +, -1 for -)>)
+d.	The outputs include plots of the LCT BX and relative BX after synchronization corrections have been applied. The timing synchronization constants and their errors are output into a .txt file
